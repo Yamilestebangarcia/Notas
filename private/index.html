@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="autor" content="Nombre del autor" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../comun/normalize.css" />
+    <link rel="stylesheet" href="./private.css" />
+    <script src="private.js" type="module"></script>
+    <title>Notas</title>
+  </head>
+  <body class="body">
+    <div id="err" class="err inactiva"></div>
+    <header class="header">
+      <div class="container_header">
+        <p class="header_p">Bienvenido:</p>
+        <p id="h2" class="header_p_dinamic"></p>
+      </div>
+      <button id="cerrar" class="header_btn">cerrar sesion</button>
+    </header>
+    <button data-nota="new-nota" class="btn">
+      <img class="mas" data-nota="new-nota" src="mas.svg" alt="añadir nota" />
+    </button>
+    <h1 class="h1">Notas</h1>
+    <h2 class="h2">Apunta aqui las cosas que deses recordar</h2>
+    <main>
+      <section id="notas" class="notas"></section>
+    </main>
+    <div id="modal" class="modal inactiva">
+      <form id="form" class="form">
+        <h4 class="form_title">Crear Nota</h4>
+        <div class="cerrar" data-cerrar="cerrar">
+          <img
+            data-cerrar="cerrar"
+            class="cerrar_img"
+            src="./cerrar.svg"
+            alt="cerrar"
+          />
+        </div>
+        <input
+          class="form_input"
+          type="text"
+          name="title"
+          placeholder="Titulo"
+        />
+        <textarea
+          class="form_input"
+          name="description"
+          placeholder="Descripcion"
+        ></textarea>
+        <select class="form_input" name="state">
+          <option value="urgente">urgente</option>
+          <option value="importante">importante</option>
+          <option value="secundario">secundario</option>
+        </select>
+        <button id="enviar" class="form_boton">enviar</button>
+      </form>
+    </div>
+  </body>
+</html>
