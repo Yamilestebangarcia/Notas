@@ -91,7 +91,7 @@ function presentarNota(element) {
   $nota.id = element._id;
   const $img = document.createElement("img");
   $img.classList.add("notaCerrar");
-  $img.src = "./cerrarRed.svg";
+  $img.src = "./cerrar.svg";
   $img.id = "cerraNota";
   const $title = document.createElement("h3");
   $title.classList.add("nota_titulo");
